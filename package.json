@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dropbox": "^4.0.7",
+    "isomorphic-fetch": "^2.2.1",
     "micro": "^9.3.2"
   },
   "devDependencies": {
