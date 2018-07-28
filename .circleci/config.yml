@@ -16,11 +16,20 @@ jobs:
       - checkout
       # - run: yarn
       - run: git clone git@github.com:sinpaout/Bwild.git -b develop && cd Bwild && ls -alFG
+      # - run:
+      #     name: Move to build
+      #     command: |
+      #       rm -rf Bwild
+      #       ls -alFG
+      #       git clone git@github.com:sinpaout/Bwild.git -b develop
+      #       cd Bwild
+      #       ls -alFG
       - run:
-          name: Move to build
+          name: Commit builded content
           command: |
-            rm -rf Bwild
-            ls -alFG
-            git clone git@github.com:sinpaout/Bwild.git -b develop
-            cd Bwild
-            ls -alFG
+            git config --global user.email "minthit21dj@gmail.com"
+            git config --global user.name "Thet Win Aung"
+            echo "<h2>Hello world</h2>" > docs/index.html
+            date "+%F %T" >> docs/index.html
+            git commit -a --amend --no-edit
+            git push -f origin HEAD
