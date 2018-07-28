@@ -14,5 +14,13 @@ jobs:
 
     steps:
       - checkout
-      - run: yarn
-      - run: ls -alFG
+      # - run: yarn
+      - run: git clone git@github.com:sinpaout/Bwild.git -b develop && cd Bwild && ls -alFG
+      - run:
+          name: Move to build
+          command: |
+            rm -rf Bwild
+            ls -alFG
+            git clone git@github.com:sinpaout/Bwild.git -b develop
+            cd Bwild
+            ls -alFG
