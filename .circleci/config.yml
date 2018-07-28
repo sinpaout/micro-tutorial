@@ -31,5 +31,5 @@ jobs:
             git config --global user.name "Thet Win Aung"
             echo "<h2>Hello world</h2>" > docs/index.html
             date "+%F %T" >> docs/index.html
-            git commit -a --amend --no-edit
-            git push -f origin HEAD
+            # git commit -a --amend --no-edit
+            # git push -f origin HEAD
