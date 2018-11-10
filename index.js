@@ -15,5 +15,5 @@ module.exports = async (req, res) => {
     return;
   }
 
-  res.end('Welcome to Akabane')
+  res.end('Welcome to nihonn')
 }
